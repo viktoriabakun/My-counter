@@ -30,7 +30,7 @@
 
 }
 
-.button-container{
+.button-container {
     display: flex;
     padding: 20px 40px;
     width: 360px;
@@ -57,6 +57,27 @@
     transition: all 0.2s;
 }
 
-.button:active{
+.button:active {
     transform: scaleX(0.8) translateY(4px);
+}
+
+.error {
+    color: red;
+    opacity: 90%;
+}
+
+.disabled {
+    display: flex;
+    justify-content: center;
+    padding: 10px 50px;
+    width: 80px;
+    color: black;
+    border-radius: 11px;
+    border: 2px dotted black;
+    background-color: white;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.2s;
+    opacity: 40%;
 }

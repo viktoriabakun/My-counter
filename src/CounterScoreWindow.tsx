@@ -4,12 +4,13 @@ import './App.css';
 
 export type CounterScoreWindowProps = {
     score: number
+    maxValue: number
 }
 
 function CounterScoreWindow(props: CounterScoreWindowProps) {
     return (
         <div className="counterScoreWindow">
-            <p>{props.score}</p>
+            <p className={props.score === props.maxValue ? 'error' : ''}>{props.score}</p>
         </div>
     );
 }

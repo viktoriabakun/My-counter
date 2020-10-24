@@ -14,10 +14,17 @@ export type CountProps = {
 const Count = (props: CountProps) => {
     return (
         <div className='counter'>
-            <CounterScoreWindow score={props.score}/>
+            <CounterScoreWindow score={props.score} maxValue={props.maxValue}/>
             <div className='button-container'>
-                <Button title={'inc'} onClick={props.inc} disabled={props.score === props.maxValue || props.error !=''}/>
-                <Button title={'reset'} onClick={props.reset} disabled={props.score  === props.startValue || props.error !=''}/>
+                <Button title={'inc'} onClick={props.inc}
+                        disabled={props.score === props.maxValue || props.error != ''}
+                        maxValue={props.maxValue}
+                        score={props.score}
+                />
+                <Button title={'reset'} onClick={props.reset}
+                        disabled={props.score === props.startValue || props.error != ''}
+                        maxValue={props.maxValue}
+                        score={props.score}/>
 
             </div>
 

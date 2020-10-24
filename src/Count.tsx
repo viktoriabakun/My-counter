@@ -2,13 +2,19 @@ import React from 'react';
 import CounterScoreWindow from "./CounterScoreWindow";
 import Button from "./Button";
 
-const Count = () => {
+export type CountProps = {
+    score: number
+    inc: () => void
+    reset: () => void
+}
+
+const Count = (props: CountProps) => {
     return (
         <div className='counter'>
-            <CounterScoreWindow/>
+            <CounterScoreWindow score={props.score}/>
             <div className='button-container'>
-                <Button title={'inc'} onClick={() => alert('btn inc')} disabled={false}/>
-                <Button title={'reset'} onClick={() => alert('btn reset')} disabled={false}/>
+                <Button title={'inc'} onClick={props.inc} disabled={false}/>
+                <Button title={'reset'} onClick={props.reset} disabled={false}/>
 
             </div>
 

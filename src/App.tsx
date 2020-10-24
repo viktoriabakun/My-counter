@@ -4,20 +4,32 @@ import Count from "./Count";
 
 function App() {
 
-    let [score, setScore] = useState(0)
+    let [startValue, setStartValue] = useState<number>(0)
+    const [maxValue, setMaxValue] = useState<number>(5)
+    let [score, setScore] = useState<number>(startValue)
+    const [error, setError] = useState<string>('')
 
     const incCounter = () => {
-        setScore(score + 1)
+        if (score < maxValue) {
+            setScore(score + 1)
+        }
+
     }
 
-    const resetCounter = () =>{
+    const resetCounter = () => {
         setScore(0)
 
     }
 
     return (
         <div className="App">
-            <Count score={score} inc={incCounter} reset={resetCounter}/>
+            <Count score={score}
+                   inc={incCounter}
+                   reset={resetCounter}
+                   error={error}
+                   maxValue={maxValue}
+                   startValue={startValue}
+            />
         </div>
     );
 }

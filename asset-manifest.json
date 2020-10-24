@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/My-counter/static/css/main.c1d97ee7.chunk.css",
+    "main.css": "/My-counter/static/css/main.65436735.chunk.css",
     "main.js": "/My-counter/static/js/main.7b6b02d3.chunk.js",
     "main.js.map": "/My-counter/static/js/main.7b6b02d3.chunk.js.map",
     "runtime-main.js": "/My-counter/static/js/runtime-main.5e334dab.js",
@@ -8,15 +8,15 @@
     "static/js/2.19041128.chunk.js": "/My-counter/static/js/2.19041128.chunk.js",
     "static/js/2.19041128.chunk.js.map": "/My-counter/static/js/2.19041128.chunk.js.map",
     "index.html": "/My-counter/index.html",
-    "precache-manifest.7b4ad68d24a5cec2ee13e4e2856f47aa.js": "/My-counter/precache-manifest.7b4ad68d24a5cec2ee13e4e2856f47aa.js",
+    "precache-manifest.f9c00b1bb69b254fec51dc8efb285339.js": "/My-counter/precache-manifest.f9c00b1bb69b254fec51dc8efb285339.js",
     "service-worker.js": "/My-counter/service-worker.js",
-    "static/css/main.c1d97ee7.chunk.css.map": "/My-counter/static/css/main.c1d97ee7.chunk.css.map",
+    "static/css/main.65436735.chunk.css.map": "/My-counter/static/css/main.65436735.chunk.css.map",
     "static/js/2.19041128.chunk.js.LICENSE.txt": "/My-counter/static/js/2.19041128.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5e334dab.js",
     "static/js/2.19041128.chunk.js",
-    "static/css/main.c1d97ee7.chunk.css",
+    "static/css/main.65436735.chunk.css",
     "static/js/main.7b6b02d3.chunk.js"
   ]
 }

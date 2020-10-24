@@ -6,7 +6,7 @@ import './App.css'
 function App() {
 
     let [startValue, setStartValue] = useState<number>(0)
-    const [maxValue, setMaxValue] = useState<number>(5)
+    const [maxValue, setMaxValue] = useState<number>(1)
     let [score, setScore] = useState<number>(startValue)
     const [error, setError] = useState<string>('')
 
@@ -18,17 +18,23 @@ function App() {
     }
 
     const resetCounter = () => {
-        setScore(0)
-
+        setScore(startValue)
     }
 
-    const setButton = () => {
-        console.log('set button')
-    }
 
     return (
         <div className={'App'}>
-            <Settings setButton={setButton}/>
+            <Settings startValue={startValue}
+                      setStartValue={setStartValue}
+                      maxValue={maxValue}
+                      setMaxValue={setMaxValue}
+                      error={error}
+                      setError={setError}
+                      score={score}
+                      setScore={setScore}
+
+
+            />
             <Count score={score}
                    inc={incCounter}
                    reset={resetCounter}

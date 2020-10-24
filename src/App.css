@@ -86,10 +86,19 @@
     width: 200px;
     height: 20px;
     padding: 10px 5px;
-    margin: 5px;
+    margin: 5px 10px;
     border: 1px solid white;
+    background-color: white;
+    color: black;
 }
 
 .settingsScreen {
-flex-direction: column
+    flex-direction: column;
+    font-size: 15px;
+    padding: 30px;
+}
+
+.inputItem {
+    display: flex;
+    justify-content: space-between;
 }

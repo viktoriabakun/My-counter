@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from "./Button";
 import './App.css'
+import Input from "./Input";
 
 
 type SettingsProps = {
@@ -11,8 +12,8 @@ const Settings = (props: SettingsProps) => {
     return (
         <div className={'counter'}>
             <div className={'settingsScreen'}>
-                <input className={'inputSet'} type="text"/>
-                <input className={'inputSet'} type="text"/>
+                <Input inputName={'min value'}/>
+                <Input inputName={'max value'}/>
             </div>
             <div className={'buttonWindow'}>
                 <Button title={'set'} onClick={props.setButton}/>

@@ -5,12 +5,16 @@ import './App.css'
 export type CounterScoreWindowProps = {
     score: number
     maxValue: number
+    error: string
 }
 
 function CounterScoreWindow(props: CounterScoreWindowProps) {
+    const {score, error, maxValue} = props
     return (
         <div className={'screen'}>
-            <p className={props.score === props.maxValue ? 'error' : ''}>{props.score}</p>
+            <div className={score === maxValue ? 'error' : ''}>{error ? '' : score}</div>
+            <div className='textError'>{error? error : '' }</div>
+
         </div>
     );
 }

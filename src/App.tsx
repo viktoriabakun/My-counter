@@ -32,8 +32,6 @@ function App() {
                       setError={setError}
                       score={score}
                       setScore={setScore}
-
-
             />
             <Count score={score}
                    inc={incCounter}

@@ -54,7 +54,7 @@ const Settings = (props: SettingsProps) => {
                 <Input name={'max value'} value={maxValueLocal} setValue={setMaxValueLocal} error={error}/>
             </div>
             <div className={'buttonWindow'}>
-                <Button title={'set'} onClick={setButton}/>
+                <Button title={'set'} onClick={setButton} disabled={!!error}/>
             </div>
         </div>
     )

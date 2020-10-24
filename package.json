@@ -15,7 +15,7 @@
     "react-scripts": "3.4.4",
     "typescript": "~3.7.2"
   },
-  "homepage": "https://viktoriabakun/github.io/My-counter",
+  "homepage": "https://viktoriabakun.github.io/My-counter/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

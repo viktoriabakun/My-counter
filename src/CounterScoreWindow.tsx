@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.css'
 
 
 export type CounterScoreWindowProps = {
@@ -9,7 +9,7 @@ export type CounterScoreWindowProps = {
 
 function CounterScoreWindow(props: CounterScoreWindowProps) {
     return (
-        <div className="counterScoreWindow">
+        <div className={'screen'}>
             <p className={props.score === props.maxValue ? 'error' : ''}>{props.score}</p>
         </div>
     );

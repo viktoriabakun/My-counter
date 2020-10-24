@@ -15,7 +15,7 @@
     padding: 0 0 20px 0;
 }
 
-.counterScoreWindow {
+.screen, .settingsScreen {
     display: flex;
     font-weight: bold;
     font-size: 34px;
@@ -30,7 +30,7 @@
 
 }
 
-.button-container {
+.buttonContainer {
     display: flex;
     padding: 20px 40px;
     width: 360px;
@@ -80,4 +80,16 @@
     font-weight: bold;
     transition: all 0.2s;
     opacity: 40%;
+}
+
+.inputSet {
+    width: 200px;
+    height: 20px;
+    padding: 10px 5px;
+    margin: 5px;
+    border: 1px solid white;
+}
+
+.settingsScreen {
+flex-direction: column
 }

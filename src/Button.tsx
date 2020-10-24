@@ -3,10 +3,10 @@ import './App.css';
 
 export type ButtonProps = {
     title: string
-    score: number,
+    score?: number,
     onClick: () => void,
-    disabled: boolean
-    maxValue: number
+    disabled?: boolean
+    maxValue?: number
 
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import CounterScoreWindow from "./CounterScoreWindow";
 import Button from "./Button";
+import './App.css'
+
 
 export type CountProps = {
     score: number
@@ -13,9 +15,9 @@ export type CountProps = {
 
 const Count = (props: CountProps) => {
     return (
-        <div className='counter'>
+        <div className={'counter'}>
             <CounterScoreWindow score={props.score} maxValue={props.maxValue}/>
-            <div className='button-container'>
+            <div className={'buttonContainer'}>
                 <Button title={'inc'} onClick={props.inc}
                         disabled={props.score === props.maxValue || props.error != ''}
                         maxValue={props.maxValue}

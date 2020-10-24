@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import './App.css';
 import Count from "./Count";
+import Settings from "./Settings";
+import './App.css'
 
 function App() {
 
@@ -21,8 +22,13 @@ function App() {
 
     }
 
+    const setButton = () => {
+        console.log('set button')
+    }
+
     return (
-        <div className="App">
+        <div className={'App'}>
+            <Settings setButton={setButton}/>
             <Count score={score}
                    inc={incCounter}
                    reset={resetCounter}

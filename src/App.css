@@ -20,6 +20,7 @@
     font-weight: bold;
     font-size: 34px;
     justify-content: center;
+    align-items: center;
     width: 360px;
     height: 150px;
     background-color: black;
@@ -61,10 +62,6 @@
     transform: scaleX(0.8) translateY(4px);
 }
 
-.error {
-    color: red;
-    opacity: 90%;
-}
 
 .disabled {
     display: flex;
@@ -101,4 +98,17 @@
 .inputItem {
     display: flex;
     justify-content: space-between;
+}
+
+.textError {
+    display: flex;
+    align-items: center;
+    color: #d41c1c;
+    font-size: 25px;
+}
+
+.error {
+    color: #d41c1c;
+    font-size: 45px;
+    font-weight: bolder;
 }

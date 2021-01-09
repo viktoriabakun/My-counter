@@ -2,6 +2,9 @@ import React, {useCallback, useEffect, useState} from 'react'
 import Button from "./Button";
 import './App.css'
 import Input from "./Input";
+import {useDispatch, useSelector} from "react-redux";
+import {getError, getMaxValue, getScore, getStartValue} from "./redux/count-selectors";
+import {setError, setMaxValue, setScore, setStartValue} from "./redux/count-actions";
 
 
 type SettingsProps = {
@@ -19,20 +22,26 @@ type SettingsProps = {
 
 const Settings = (props: SettingsProps) => {
 
-    const { error, maxValue, startValue, setError, setMaxValue, setStartValue, setScore, score } = props
+    const dispatch = useDispatch();
+    const score = useSelector(getScore)
+    const maxValue = useSelector(getMaxValue)
+    const error = useSelector(getError)
+    const startValue = useSelector(getStartValue)
+
+    // const { error, maxValue, startValue, setError, setMaxValue, setStartValue, setScore, score } = props
 
     const [minValueLocal, setMinValueLocal] = useState<number>(0);
     const [maxValueLocal, setMaxValueLocal] = useState<number>(maxValue);
 
     const isError = useCallback(() => {
         if (minValueLocal < 0) {
-            setError('min не может быть меньше 0')
+            dispatch(setError('min не может быть меньше 0'))
         } else if (minValueLocal === maxValueLocal) {
-            setError('min не может быть равен max')
+            dispatch(setError('min не может быть равен max'))
         } else if (minValueLocal > maxValueLocal) {
-            setError('min не может быть больше max')
+            dispatch(setError('min не может быть больше max'))
         } else {
-            setError('')
+            dispatch(setError(''))
         }
     }, [minValueLocal, maxValueLocal, setError])
 
@@ -42,9 +51,10 @@ const Settings = (props: SettingsProps) => {
 
 
     const setButton = () => {
-        setStartValue(minValueLocal)
-        setMaxValue(maxValueLocal)
-        setScore(minValueLocal)
+
+        dispatch(setStartValue(minValueLocal))
+        dispatch(setMaxValue(maxValueLocal))
+        dispatch(setScore(minValueLocal))
     }
 
     return (

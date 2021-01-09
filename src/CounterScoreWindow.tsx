@@ -5,7 +5,7 @@ import './App.css'
 export type CounterScoreWindowProps = {
     score: number
     maxValue: number
-    error: string
+    error: string | null | undefined
 }
 
 function CounterScoreWindow(props: CounterScoreWindowProps) {

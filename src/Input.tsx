@@ -4,7 +4,7 @@ type InputProps = {
     name: string
     value: number
     setValue: (value:number) => void
-    error: string
+    error: string | null | undefined
 }
 
 const Input = (props: InputProps) => {
